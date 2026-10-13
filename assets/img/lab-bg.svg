@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMaxYMax slice">
+  <!-- Laboratório futurista à noite, com um programador estilo anime (fundo do site da Caldeira Labs). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#090619"/>
+      <stop offset=".55" stop-color="#17103f"/>
+      <stop offset="1" stop-color="#2a0f4a"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1150"/>
+      <stop offset="1" stop-color="#0c0824"/>
+    </linearGradient>
+    <radialGradient id="screenGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#e879f9" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#e879f9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iris" cx=".5" cy=".35" r=".7">
+      <stop offset="0" stop-color="#a5f3fc"/>
+      <stop offset=".55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#155e75"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2a6e"/>
+      <stop offset="1" stop-color="#120f33"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b21b6"/>
+      <stop offset="1" stop-color="#2e1065"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- Céu e parede -->
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- Estrelas -->
+  <g fill="#fff">
+    <circle cx="120" cy="90" r="1.6" opacity=".7"/><circle cx="260" cy="160" r="1.2" opacity=".5"/>
+    <circle cx="410" cy="70" r="1.8" opacity=".8"/><circle cx="560" cy="140" r="1.1" opacity=".5"/>
+    <circle cx="700" cy="60" r="1.5" opacity=".6"/><circle cx="860" cy="120" r="1.3" opacity=".6"/>
+    <circle cx="980" cy="50" r="1.7" opacity=".7"/><circle cx="1130" cy="110" r="1.2" opacity=".5"/>
+    <circle cx="1290" cy="70" r="1.6" opacity=".7"/><circle cx="1450" cy="130" r="1.3" opacity=".5"/>
+    <circle cx="1540" cy="60" r="1.5" opacity=".6"/><circle cx="330" cy="240" r="1" opacity=".4"/>
+  </g>
+
+  <!-- Janela panorâmica com a cidade -->
+  <g opacity=".85">
+    <path d="M60 760 V250 Q60 140 170 140 H760 Q870 140 870 250 V760 Z" fill="#0d0a2b" stroke="#3b2f8f" stroke-width="6"/>
+    <g fill="#1a1450">
+      <rect x="90" y="560" width="70" height="200"/><rect x="170" y="500" width="55" height="260"/>
+      <rect x="235" y="590" width="80" height="170"/><rect x="325" y="450" width="60" height="310"/>
+      <rect x="395" y="540" width="90" height="220"/><rect x="495" y="480" width="55" height="280"/>
+      <rect x="560" y="600" width="75" height="160"/><rect x="645" y="520" width="60" height="240"/>
+      <rect x="715" y="580" width="125" height="180"/>
+    </g>
+    <g fill="#22d3ee" opacity=".55">
+      <rect x="182" y="520" width="8" height="5"/><rect x="200" y="545" width="8" height="5"/><rect x="338" y="470" width="8" height="5"/>
+      <rect x="358" y="505" width="8" height="5"/><rect x="510" y="500" width="8" height="5"/><rect x="525" y="540" width="8" height="5"/>
+      <rect x="660" y="540" width="8" height="5"/><rect x="680" y="590" width="8" height="5"/><rect x="410" y="560" width="8" height="5"/>
+    </g>
+    <g fill="#e879f9" opacity=".5">
+      <rect x="250" y="610" width="8" height="5"/><rect x="430" y="600" width="8" height="5"/><rect x="740" y="600" width="8" height="5"/>
+      <rect x="110" y="580" width="8" height="5"/><rect x="580" y="620" width="8" height="5"/>
+    </g>
+    <path d="M465 140 V760 M60 450 H870" stroke="#3b2f8f" stroke-width="5"/>
+    <circle cx="700" cy="250" r="46" fill="#fde68a" opacity=".12" filter="url(#softGlow)"/>
+    <circle cx="700" cy="250" r="26" fill="#fef3c7" opacity=".55"/>
+  </g>
+
+  <!-- Chão com grelha néon -->
+  <rect y="760" width="1600" height="240" fill="url(#floor)"/>
+  <g stroke="#22d3ee" stroke-opacity=".18" stroke-width="1.5">
+    <path d="M0 800 H1600 M0 850 H1600 M0 915 H1600 M0 990 H1600"/>
+    <path d="M800 760 L-400 1000 M800 760 L0 1000 M800 760 L400 1000 M800 760 L800 1000 M800 760 L1200 1000 M800 760 L1600 1000 M800 760 L2000 1000"/>
+  </g>
+  <path d="M0 760 H1600" stroke="#e879f9" stroke-opacity=".45" stroke-width="2"/>
+
+  <!-- Prateleiras com equipamento -->
+  <g opacity=".9">
+    <rect x="930" y="230" width="640" height="10" rx="3" fill="#2a2170"/>
+    <rect x="930" y="420" width="640" height="10" rx="3" fill="#2a2170"/>
+    <g fill="#1e1752" stroke="#22d3ee" stroke-opacity=".35" stroke-width="2">
+      <rect x="950" y="180" width="70" height="50" rx="6"/><rect x="1035" y="195" width="40" height="35" rx="5"/>
+      <rect x="1450" y="170" width="95" height="60" rx="6"/>
+    </g>
+    <g fill="#f472b6" opacity=".9"><circle cx="965" cy="195" r="4"/><circle cx="980" cy="195" r="4" fill="#4ade80"/><circle cx="1465" cy="185" r="4" fill="#22d3ee"/></g>
+  </g>
+
+  <!-- Holograma de código -->
+  <g transform="translate(1110 270)">
+    <rect x="-20" y="-20" width="300" height="200" rx="16" fill="url(#screenGlow)" opacity=".5" filter="url(#softGlow)"/>
+    <rect width="260" height="150" rx="12" fill="#0e2a44" fill-opacity=".55" stroke="#22d3ee" stroke-width="2.5" filter="url(#glow)"/>
+    <g stroke-linecap="round" stroke-width="7">
+      <path d="M22 30 H70" stroke="#e879f9"/><path d="M80 30 H160" stroke="#67e8f9"/>
+      <path d="M40 54 H120" stroke="#a78bfa"/><path d="M130 54 H200" stroke="#4ade80"/>
+      <path d="M40 78 H90" stroke="#67e8f9"/><path d="M100 78 H230" stroke="#fbbf24"/>
+      <path d="M22 102 H60" stroke="#e879f9"/><path d="M72 102 H150" stroke="#67e8f9"/>
+      <path d="M22 126 H110" stroke="#a78bfa"/>
+    </g>
+  </g>
+
+  <!-- Holograma: bola de basquetebol (BasketStats) -->
+  <g transform="translate(1490 340)" filter="url(#glow)">
+    <circle r="62" fill="#fb923c" fill-opacity=".14" stroke="#fb923c" stroke-width="3"/>
+    <g fill="none" stroke="#fdba74" stroke-width="2.5">
+      <path d="M-62 0 H62 M0 -62 V62"/>
+      <path d="M-44 -44 C-24 -22 -24 22 -44 44 M44 -44 C24 -22 24 22 44 44"/>
+    </g>
+    <ellipse cy="96" rx="48" ry="8" fill="#fb923c" opacity=".35"/>
+  </g>
+
+  <!-- Holograma: globo com pin (Voyage) -->
+  <g transform="translate(1010 330)" filter="url(#glow)">
+    <circle r="50" fill="#34d399" fill-opacity=".12" stroke="#34d399" stroke-width="3"/>
+    <g fill="none" stroke="#6ee7b7" stroke-width="2"><ellipse rx="50" ry="18"/><ellipse rx="20" ry="50"/><path d="M-50 0 H50"/></g>
+    <path d="M12 -78 C30 -78 34 -58 22 -46 L12 -30 L2 -46 C-10 -58 -6 -78 12 -78 Z" fill="#f43f5e"/>
+    <circle cx="12" cy="-62" r="6" fill="#fff" opacity=".8"/>
+  </g>
+
+  <!-- Brilho do ecrã na zona do programador -->
+  <ellipse cx="1270" cy="690" rx="260" ry="190" fill="url(#screenGlow)" opacity=".55"/>
+  <ellipse cx="1060" cy="800" rx="140" ry="70" fill="url(#pinkGlow)" opacity=".6"/>
+
+  <!-- Programador estilo anime -->
+  <g>
+    <!-- Corpo (hoodie) -->
+    <path d="M1150 860 C1150 760 1190 720 1265 720 C1340 720 1380 760 1380 860 Z" fill="url(#hoodie)"/>
+    <path d="M1225 726 L1265 770 L1305 726" fill="none" stroke="#c4b5fd" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1240 760 V800 M1290 760 V800" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round"/>
+    <!-- Pescoço -->
+    <rect x="1248" y="680" width="34" height="46" rx="12" fill="#f2c6ad"/>
+    <!-- Cabeça -->
+    <ellipse cx="1265" cy="610" rx="78" ry="84" fill="#ffdcc6"/>
+    <!-- Cabelo -->
+    <path d="M1180 620 C1170 520 1230 490 1270 495 C1330 490 1370 540 1352 625
+             C1345 590 1330 570 1318 560 C1322 585 1310 600 1300 606 C1300 584 1290 568 1276 560
+             C1278 590 1262 600 1246 604 C1252 584 1248 566 1236 556 C1228 586 1210 602 1194 612
+             C1198 594 1196 580 1192 570 C1184 590 1182 606 1180 620 Z" fill="url(#hair)"/>
+    <path d="M1300 520 C1320 528 1335 545 1340 568" fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <!-- Auscultadores -->
+    <path d="M1182 610 C1178 520 1352 520 1348 610" fill="none" stroke="#e879f9" stroke-width="9" stroke-linecap="round"/>
+    <rect x="1168" y="596" width="26" height="46" rx="12" fill="#a21caf"/>
+    <rect x="1336" y="596" width="26" height="46" rx="12" fill="#a21caf"/>
+    <path d="M1182 640 C1188 672 1210 684 1236 684" fill="none" stroke="#a21caf" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="1238" cy="684" r="6" fill="#e879f9"/>
+    <!-- Olhos grandes -->
+    <g>
+      <ellipse cx="1232" cy="628" rx="20" ry="25" fill="#fff"/>
+      <ellipse cx="1298" cy="628" rx="20" ry="25" fill="#fff"/>
+      <ellipse cx="1234" cy="632" rx="15" ry="20" fill="url(#iris)"/>
+      <ellipse cx="1296" cy="632" rx="15" ry="20" fill="url(#iris)"/>
+      <ellipse cx="1234" cy="636" rx="7" ry="10" fill="#0b1b2e"/>
+      <ellipse cx="1296" cy="636" rx="7" ry="10" fill="#0b1b2e"/>
+      <circle cx="1240" cy="622" r="5" fill="#fff"/><circle cx="1302" cy="622" r="5" fill="#fff"/>
+      <circle cx="1229" cy="642" r="2.5" fill="#fff"/><circle cx="1291" cy="642" r="2.5" fill="#fff"/>
+      <path d="M1210 604 Q1232 594 1254 606 M1276 606 Q1298 594 1320 604" fill="none" stroke="#1e1b4b" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <!-- Rubor e sorriso -->
+    <ellipse cx="1208" cy="662" rx="12" ry="6" fill="#fb7185" opacity=".45"/>
+    <ellipse cx="1322" cy="662" rx="12" ry="6" fill="#fb7185" opacity=".45"/>
+    <path d="M1252 668 Q1265 678 1278 668" fill="none" stroke="#9f1239" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Luz do ecrã no rosto -->
+    <ellipse cx="1265" cy="660" rx="70" ry="40" fill="#22d3ee" opacity=".08"/>
+    <!-- Mãos no teclado -->
+    <ellipse cx="1205" cy="842" rx="22" ry="13" fill="#ffdcc6"/>
+    <ellipse cx="1325" cy="842" rx="22" ry="13" fill="#ffdcc6"/>
+  </g>
+
+  <!-- Secretária -->
+  <rect x="960" y="852" width="640" height="26" rx="6" fill="#241a5c"/>
+  <path d="M960 852 H1600" stroke="#22d3ee" stroke-width="3" opacity=".7"/>
+  <rect x="980" y="878" width="18" height="122" fill="#1a1347"/><rect x="1560" y="878" width="18" height="122" fill="#1a1347"/>
+
+  <!-- Portátil (visto por trás) com o logótipo -->
+  <g>
+    <path d="M1165 852 L1185 760 H1345 L1365 852 Z" fill="#c7d2fe"/>
+    <path d="M1165 852 L1185 760 H1345 L1365 852 Z" fill="#a5b4fc" opacity=".35"/>
+    <rect x="1150" y="848" width="230" height="10" rx="4" fill="#818cf8"/>
+    <g transform="translate(1265 808)" filter="url(#glow)">
+      <rect x="-20" y="-16" width="40" height="32" rx="8" fill="#0b0820"/>
+      <text x="0" y="6" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#22d3ee">CL</text>
+    </g>
+  </g>
+
+  <!-- Frascos com líquidos néon -->
+  <g>
+    <path d="M1030 852 L1046 796 V766 H1066 V796 L1082 852 Z" fill="#e0e7ff" fill-opacity=".18" stroke="#c7d2fe" stroke-width="2.5"/>
+    <path d="M1036 852 L1046 816 H1066 L1076 852 Z" fill="#e879f9" opacity=".85" filter="url(#glow)"/>
+    <circle cx="1056" cy="826" r="3" fill="#fff" opacity=".7"/><circle cx="1062" cy="838" r="2" fill="#fff" opacity=".6"/>
+    <rect x="1098" y="784" width="26" height="68" rx="10" fill="#e0e7ff" fill-opacity=".18" stroke="#c7d2fe" stroke-width="2.5"/>
+    <rect x="1102" y="812" width="18" height="38" rx="7" fill="#4ade80" opacity=".85" filter="url(#glow)"/>
+    <rect x="1440" y="800" width="60" height="52" rx="8" fill="#1e1752" stroke="#22d3ee" stroke-width="2"/>
+    <path d="M1452 820 H1488 M1452 834 H1476" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+    <!-- Caneca -->
+    <path d="M1400 812 H1428 V848 Q1428 852 1424 852 H1404 Q1400 852 1400 848 Z" fill="#f472b6"/>
+    <path d="M1428 820 Q1440 822 1438 834 Q1436 842 1428 842" fill="none" stroke="#f472b6" stroke-width="4"/>
+    <path d="M1408 800 Q1404 790 1410 782 M1418 800 Q1414 790 1420 782" fill="none" stroke="#e0e7ff" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+  </g>
+
+  <!-- Partículas -->
+  <g fill="#67e8f9" opacity=".7">
+    <circle cx="1120" cy="470" r="2.5"/><circle cx="1400" cy="500" r="2"/><circle cx="1560" cy="480" r="2.5"/>
+    <circle cx="1000" cy="560" r="2"/><circle cx="1440" cy="250" r="2"/>
+  </g>
+  <g fill="#f0abfc" opacity=".7"><circle cx="1180" cy="520" r="2"/><circle cx="1520" cy="560" r="2.5"/><circle cx="960" cy="470" r="2"/></g>
+</svg>
