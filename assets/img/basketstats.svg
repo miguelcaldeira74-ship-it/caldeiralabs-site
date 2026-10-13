@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="BasketStats">
+  <rect width="108" height="108" rx="26" fill="#C2410C"/>
+  <g fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round">
+    <circle cx="54" cy="54" r="24"/>
+    <path d="M30 54H78M54 30V78"/>
+    <path d="M37 37C45 45 45 63 37 71M71 37C63 45 63 63 71 71"/>
+  </g>
+</svg>

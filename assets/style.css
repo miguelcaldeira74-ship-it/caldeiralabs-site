@@ -1,0 +1,123 @@
+/* Caldeira Labs — estilos partilhados por todas as páginas. */
+:root {
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --surface-2: #f2ede5;
+  --text: #1f1b16;
+  --muted: #6b635a;
+  --line: #e5ddd2;
+  --accent: #c2410c;
+  --accent-ink: #ffffff;
+  --voyage: #2f7d6d;
+  --radius: 18px;
+  --shadow: 0 1px 2px rgba(31, 27, 22, .06), 0 8px 24px rgba(31, 27, 22, .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15120f;
+    --surface: #1f1b17;
+    --surface-2: #2a251f;
+    --text: #f3ede6;
+    --muted: #b2a89c;
+    --line: #3a332b;
+    --accent: #f0703a;
+    --accent-ink: #1a0d06;
+    --voyage: #5fbfa8;
+    --shadow: none;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Línguas: só aparece o texto da língua escolhida (português por omissão, também sem JavaScript). */
+[data-l] { display: none; }
+html[data-lang="pt"] [data-l="pt"],
+html[data-lang="es"] [data-l="es"],
+html[data-lang="en"] [data-l="en"] { display: revert; }
+
+/* Cabeçalho */
+.top { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
+.top .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: -.01em; }
+.brand .mark { width: 30px; height: 30px; border-radius: 9px; background: var(--text); color: var(--bg); display: grid; place-items: center; font-size: 15px; }
+.nav { display: flex; gap: 18px; margin-left: auto; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--text); }
+.langs { display: flex; gap: 4px; }
+.langs button {
+  border: 1px solid var(--line); background: transparent; color: var(--muted);
+  border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.langs button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+@media (max-width: 640px) {
+  .top .wrap { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+  .nav { order: 3; width: 100%; margin-left: 0; gap: 16px; }
+  .langs { margin-left: auto; }
+}
+
+/* Secções */
+.hero { padding: 64px 0 40px; }
+.hero h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.1; letter-spacing: -.02em; margin: 0 0 16px; }
+.hero p.lead { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0; }
+.app-hero { display: flex; gap: 24px; align-items: center; }
+.app-hero .icon { width: 96px; height: 96px; border-radius: 24px; flex: none; box-shadow: var(--shadow); }
+@media (max-width: 640px) { .app-hero { flex-direction: column; align-items: flex-start; } }
+section { padding: 32px 0; }
+h2 { font-size: 26px; letter-spacing: -.01em; margin: 0 0 16px; }
+h3 { font-size: 19px; margin: 24px 0 8px; }
+.muted { color: var(--muted); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px;
+}
+.card .head { display: flex; align-items: center; gap: 14px; }
+.card .head img { width: 56px; height: 56px; border-radius: 14px; }
+.card h3 { margin: 0; }
+.card p { margin: 0; color: var(--muted); }
+.card .actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; padding-top: 8px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
+  background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; font-size: 15px;
+}
+.btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+.btn.voyage { background: var(--voyage); color: #fff; }
+.badge {
+  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 3px 10px;
+  border-radius: 999px; background: var(--surface-2); color: var(--muted);
+}
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+.features li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.features li b { display: block; margin-bottom: 4px; }
+.features li span { color: var(--muted); font-size: 15px; }
+
+.shots { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; }
+.shots img { width: 220px; flex: none; border-radius: 16px; border: 1px solid var(--line); scroll-snap-align: start; }
+
+.guide ol, .guide ul { padding-left: 22px; }
+.guide li { margin: 4px 0; }
+details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin: 10px 0; }
+details summary { cursor: pointer; font-weight: 600; }
+details p { margin: 10px 0 0; color: var(--muted); }
+
+/* Política de privacidade: texto corrido, fácil de ler */
+.policy { max-width: 760px; }
+.policy h2 { font-size: 22px; margin-top: 32px; }
+.policy li { margin: 6px 0; }
+
+footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+footer a { color: var(--muted); }
