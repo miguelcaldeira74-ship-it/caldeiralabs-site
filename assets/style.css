@@ -2,7 +2,9 @@
 /* Tema "laboratório néon": sempre escuro, a condizer com a imagem de fundo (assets/img/lab-bg.svg). */
 :root {
   --bg: #0b0820;
-  --surface: rgba(22, 17, 58, .78);
+  --surface: #261d5a;
+  --surface-hi: #33287a;
+  --card-line: rgba(165, 180, 255, .34);
   --surface-2: rgba(255, 255, 255, .08);
   --text: #eeeaff;
   --muted: #b3aedb;
@@ -93,7 +95,7 @@ h3 { font-size: 19px; margin: 24px 0 8px; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .card {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--surface-hi) 0%, var(--surface) 70%); border: 1px solid var(--card-line); border-radius: var(--radius);
   padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px;
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
@@ -117,7 +119,7 @@ h3 { font-size: 19px; margin: 24px 0 8px; }
 }
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
-.features li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.features li { background: linear-gradient(160deg, var(--surface-hi) 0%, var(--surface) 75%); border: 1px solid var(--card-line); border-radius: 14px; padding: 16px 18px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .features li b { display: block; margin-bottom: 4px; }
 .features li span { color: var(--muted); font-size: 15px; }
 
@@ -126,7 +128,7 @@ h3 { font-size: 19px; margin: 24px 0 8px; }
 
 .guide ol, .guide ul { padding-left: 22px; }
 .guide li { margin: 4px 0; }
-details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin: 10px 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+details { background: var(--surface); border: 1px solid var(--card-line); border-radius: 14px; padding: 14px 18px; margin: 10px 0; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 details summary { cursor: pointer; font-weight: 600; }
 details p { margin: 10px 0 0; color: var(--muted); }
 
@@ -134,7 +136,7 @@ details p { margin: 10px 0 0; color: var(--muted); }
 .policy { max-width: 820px; }
 /* Texto longo (políticas, guia) num painel quase opaco, para ler sem distração do fundo. */
 .policy > div, .guide {
-  background: rgba(14, 10, 40, .9); border: 1px solid var(--line); border-radius: var(--radius);
+  background: #1b1545; border: 1px solid var(--card-line); border-radius: var(--radius);
   padding: 8px 28px 28px; margin-top: 24px;
 }
 .guide { padding-top: 24px; }
