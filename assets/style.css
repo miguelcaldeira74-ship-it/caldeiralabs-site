@@ -146,3 +146,20 @@ details p { margin: 10px 0 0; color: var(--muted); }
 footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 28px 0 40px; color: var(--muted); font-size: 14px; background: rgba(11, 8, 32, .8); }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 footer a { color: var(--muted); }
+
+/* Página da BasketStats: captura grande em moldura de tablet e linhas alternadas imagem + texto. */
+.device { margin: 8px auto 40px; max-width: 900px; padding: 14px; border-radius: 28px;
+  background: linear-gradient(145deg, #2a2340, #120e26); border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45), 0 0 40px rgba(251, 146, 60, .18); }
+.device img { width: 100%; border-radius: 14px; }
+.showcase { display: grid; gap: 48px; padding-bottom: 16px; }
+.show-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 36px; align-items: center; }
+.show-row.rev .show-pic { order: 2; }
+.show-pic img { width: 100%; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 14px 36px rgba(0, 0, 0, .4); }
+.show-text h3 { font-size: 24px; margin: 0 0 10px; color: var(--accent); }
+.show-text p { margin: 0; color: var(--muted); font-size: 17px; }
+@media (max-width: 760px) {
+  .show-row { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .show-row.rev .show-pic { order: 0; }
+  .device { padding: 8px; border-radius: 18px; }
+}
