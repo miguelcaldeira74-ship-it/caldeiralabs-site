@@ -1,0 +1,7 @@
+# Páginas e ficheiros de estilo/código: o navegador e a cache confirmam sempre se há versão nova.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/*.js
+  Cache-Control: public, max-age=0, must-revalidate
