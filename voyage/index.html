@@ -6,9 +6,10 @@
   <title data-pt="Voyage — o seu diário de viagens" data-es="Voyage — tu diario de viajes" data-en="Voyage — your travel journal">Voyage — o seu diário de viagens</title>
   <meta name="description" content="Voyage: diário de viagens com países, cidades e itinerários num mapa interativo. Sem anúncios nem contas.">
   <link rel="icon" href="/assets/img/voyage.png">
-  <link rel="stylesheet" href="/assets/style.css?v=20261015d">
+  <link rel="stylesheet" href="/assets/style.css?v=20261015e">
   <style>:root { --accent: var(--voyage); --accent-ink: #03231a; }</style>
-  <script src="/assets/lang.js?v=20261015d"></script>
+  <script src="/assets/lang.js?v=20261015e"></script>
+  <script src="/assets/carousel.js?v=20261015e"></script>
 </head>
 <body>
 <header class="top">
@@ -40,14 +41,36 @@
     </div>
   </div>
 
-  <section>
-    <div class="shots">
-      <img src="/assets/img/voyage-1.jpg" alt="" width="220" height="477" loading="lazy">
-      <img src="/assets/img/voyage-2.jpg" alt="" width="220" height="477" loading="lazy">
-      <img src="/assets/img/voyage-3.jpg" alt="" width="220" height="477" loading="lazy">
-      <img src="/assets/img/voyage-4.jpg" alt="" width="220" height="477" loading="lazy">
-      <img src="/assets/img/voyage-5.jpg" alt="" width="220" height="477" loading="lazy">
-      <img src="/assets/img/voyage-6.jpg" alt="" width="220" height="477" loading="lazy">
+  <section class="carousel portrait" aria-label="Voyage">
+    <div class="car-stage">
+      <button class="car-prev" type="button" aria-label="Anterior / Anterior / Previous">‹</button>
+      <div class="car-track" tabindex="0">
+        <figure class="slide">
+          <img src="/assets/img/voyage-1.jpg" alt="Os seus destinos" width="600" height="1300">
+          <figcaption><span data-l="pt"><b>Os seus destinos</b> Países, cidades e locais visitados num relance, com bandeiras e contadores.</span><span data-l="es"><b>Tus destinos</b> Países, ciudades y lugares visitados de un vistazo, con banderas y contadores.</span><span data-l="en"><b>Your destinations</b> Countries, cities and places visited at a glance, with flags and counters.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="/assets/img/voyage-6.jpg" alt="Mapa de viagens" width="600" height="1300" loading="lazy">
+          <figcaption><span data-l="pt"><b>Mapa de viagens</b> Todos os seus locais num só mapa interativo.</span><span data-l="es"><b>Mapa de viajes</b> Todos tus lugares en un solo mapa interactivo.</span><span data-l="en"><b>Travel map</b> All your places on one interactive map.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="/assets/img/voyage-3.jpg" alt="Para fazer e já fiz" width="600" height="1300" loading="lazy">
+          <figcaption><span data-l="pt"><b>Para fazer e já fiz</b> Organize os locais de cada cidade e peça sugestões à IA ou procure hotéis no Booking.</span><span data-l="es"><b>Por hacer y ya hecho</b> Organiza los lugares de cada ciudad y pide sugerencias a la IA o busca hoteles en Booking.</span><span data-l="en"><b>To do and done</b> Organise each city's places and ask the AI for ideas or look for hotels on Booking.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="/assets/img/voyage-4.jpg" alt="Notas de viagem" width="600" height="1300" loading="lazy">
+          <figcaption><span data-l="pt"><b>Notas de viagem</b> Notas escritas ou ditadas por voz, morada e mapa de cada local. Marque-o como «Já fiz» quando o visitar.</span><span data-l="es"><b>Notas de viaje</b> Notas escritas o dictadas por voz, dirección y mapa de cada lugar. Márcalo como «Ya hecho» al visitarlo.</span><span data-l="en"><b>Travel notes</b> Written or dictated notes, address and map for each place. Mark it as done once you visit.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="/assets/img/voyage-5.jpg" alt="Memórias com fotografias" width="600" height="1300" loading="lazy">
+          <figcaption><span data-l="pt"><b>Memórias com fotografias</b> Guarde a data, a avaliação, um comentário e as fotografias de cada visita.</span><span data-l="es"><b>Recuerdos con fotos</b> Guarda la fecha, la valoración, un comentario y las fotos de cada visita.</span><span data-l="en"><b>Memories with photos</b> Keep the date, a rating, a comment and the photos from each visit.</span></figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="/assets/img/voyage-2.jpg" alt="Partilhar e planear" width="600" height="1300" loading="lazy">
+          <figcaption><span data-l="pt"><b>Partilhar e planear</b> Partilhe ou importe roteiros, peça sugestões à IA e veja voos no Skyscanner.</span><span data-l="es"><b>Compartir y planificar</b> Comparte o importa itinerarios, pide sugerencias a la IA y mira vuelos en Skyscanner.</span><span data-l="en"><b>Share and plan</b> Share or import itineraries, ask the AI for suggestions and check flights on Skyscanner.</span></figcaption>
+        </figure>
+      </div>
+      <button class="car-next" type="button" aria-label="Seguinte / Siguiente / Next">›</button>
     </div>
   </section>
 
